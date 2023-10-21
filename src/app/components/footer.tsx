@@ -1,3 +1,4 @@
+import { IImage } from '@/app/components/interfaces';
 import { Facebook, Instagram, LinkedIn } from 'iconoir-react'
 import Image from 'next/image'
 
@@ -6,19 +7,13 @@ interface Props {
     iconsSize: number;
     links: IconsLinks
     email: string;
-    image: Image;
+    image: IImage;
 }
 
 interface IconsLinks {
     instagram: string;
     facebook: string;
     linkedIn: string;
-}
-
-interface Image {
-    path: string;
-    alt: string;
-    size: number;
 }
 
 export const Footer = ({iconsSize, image, email, links}: Props) => {
