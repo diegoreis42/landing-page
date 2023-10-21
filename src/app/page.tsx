@@ -7,9 +7,9 @@ export default function Home() {
         mainText="Eius et voluptatem et ut."
         subText='At quas ab aspernatur et ut.'
         image={{
-          path: '/img/mainlogo-xs.svg',
+          path: '/img/team-xl.svg',
           alt: 'essa eh a logo principal',
-          size: 300
+          size: 700
         }}
         buttonText='Saiba mais'
       />
