@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Footer } from '@/app/components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +16,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body className={inter.className}>
+        
+        {children}
+       
+        <Footer
+          iconsSize={35}
+          links={{
+            instagram: 'https://google.com',
+            facebook: 'https://google.com',
+            linkedIn: 'https://google.com',
+          }}
+          email={"sla@gmail.com"}
+          image={{
+            path: "/img/logo.png",
+            alt:"Isso eh a logo foda no footer",
+            size:200
+          }}
+        />
+        </body>
     </html>
   )
 }
