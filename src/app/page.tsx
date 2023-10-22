@@ -1,4 +1,5 @@
 import { Hero, Carousel, Faq } from "@/app/components";
+import { Forms } from '@/app/components/Forms';
 
 
 export default function Home() {
@@ -72,6 +73,8 @@ export default function Home() {
       />
 
       <Faq />
+
+      <Forms />
     </main>
   );
 }

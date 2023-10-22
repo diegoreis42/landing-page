@@ -19,7 +19,7 @@ const faqData = [
 export const Faq = () => {
   return (
     <div className=" pt-3 items-center md:m-16">
-      <h2 className='text-stone-700 text-3xl flex justify-center p-5'>Perguntas Frequentes</h2>
+      <h2 className='text-sky-800 font-bold text-3xl flex justify-center p-5'>Perguntas Frequentes</h2>
       {faqData.map((faq, index) => (
         <div key={index} className="my-2">
           <Disclosure>
