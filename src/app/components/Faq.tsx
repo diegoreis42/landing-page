@@ -16,7 +16,7 @@ const faqData = [
   },
 ];
 
-export default function Faq() {
+export const Faq = () => {
   return (
     <div className=" pt-3 items-center  md:m-16">
       {faqData.map((faq, index) => (

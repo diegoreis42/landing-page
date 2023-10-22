@@ -1,4 +1,4 @@
-import { IImage } from '@/app/components';
+import { IImage } from '@/app/components/interfaces';
 import Image from 'next/image';
 
 interface Props {

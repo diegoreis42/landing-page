@@ -1,6 +1,5 @@
+import { Hero, Carousel, Faq } from "@/app/components";
 
-import { Hero, Carousel } from "@/app/components";
-import Faq from '@/app/components/Accordion';
 
 export default function Home() {
   const services = [
