@@ -4,18 +4,26 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import { AlignJustify } from "iconoir-react";
+import { IImage, Link } from '@/app/components/interfaces';
 
-const Header = () => {
+
+interface Props {
+  links: Link[];
+  image: IImage;
+}
+
+
+const Header = ({ links, image }: Props) => {
   return (
-    <header className="bg-white p-4">
+    <header className="fixed bg-white p-4 container">
       <div className="flex flex-row justify-between items-center px-4">
         <div className="flex w-1/2 sm:w-auto">
-          <a href="/">
+          <a href={image.link?.link}>
             <Image
-              src="/img/bsol.png"
-              alt="byron Logo"
-              width={200}
-              height={200}
+              src={image.path}
+              alt={image.alt}
+              width={image.size}
+              height={image.size}
               priority
             />
           </a>
@@ -36,51 +44,29 @@ const Header = () => {
               leaveTo="transform opacity-0 scale-95"
             >
               <Menu.Items className="absolute right-0 mt-2 flex flex-col text-white bg-sky-500 p-2 rounded w-48">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      className={`block py-2 ${active && "bg-blue-500"}`}
-                      href="/"
-                    >
-                      Planos
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      className={`block py-2 ${active && "bg-blue-500"}`}
-                      href="/"
-                    >
-                      Carreira
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      className={`block py-2 ${active && "bg-blue-500"}`}
-                      href="/"
-                    >
-                      Entre em contato
-                    </a>
-                  )}
-                </Menu.Item>
+                {links.map((link, index) => (
+                  <Menu.Item key={index}>
+                    {({ active }) => (
+                      <a
+                        className={`block py-2 ${active && "bg-blue-500"}`}
+                        href={link.link}
+                      >
+                        {link.text}
+                      </a>
+                    )}
+                  </Menu.Item>
+                ))}
               </Menu.Items>
             </Transition>
           </Menu>
         </div>
 
         <div className="hidden sm:flex space-x-4">
-          <a href="/" className="text-sky-500">
-            Planos
-          </a>
-          <a href="/" className="text-sky-500">
-            Carreira
-          </a>
-          <a href="/" className="text-sky-500">
-            Entre em contato
-          </a>
+          {links.map((link) => (
+            <a href={link.link} className="text-sky-500">
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
     </header>

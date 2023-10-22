@@ -22,7 +22,31 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <Header />
+        <Header
+          image={{
+            path: '/img/bsol.png',
+            alt: 'logo da byron',
+            size: 200
+          }}
+
+          links={[
+            {
+              text: 'Planos',
+              link: '/'
+            },
+
+            {
+              text: 'Carreira',
+              link: '/'
+            },
+
+            {
+              text: 'Entre em contato',
+              link: '/'
+            }
+
+          ]}
+        />
 
         {children}
 

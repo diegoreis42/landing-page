@@ -59,7 +59,7 @@ export const Carousel = ({ serviceList }: ServiceList) => {
                   <Card.Text>
                     {service.subText}
                   </Card.Text>
-                  <Button variant="primary">Contratar</Button>
+                  <Button variant="primary" className='bg-blue-500'>Contratar</Button>
                 </Card.Body>
               </Card>
             ))}
