@@ -1,7 +1,7 @@
 import { Hero, Carousel } from "@/app/components";
 
 export default function Home() {
-const services = [[
+const services = [
   {
     image: {
       path: "/img/sla.jpg",
@@ -17,27 +17,24 @@ const services = [[
     },
     mainText: "isso eh um serviço sla",
     subText: "nos sadgvasfd bla",
-  }
-],
-[
-  {
-    image: {
-      path: "/img/sla.jpg",
-      alt: "serviço sla",
-    },
-    mainText: "isso eh um serviço sla",
-    subText: "nos bla bla",
   },
-  {
-    image: {
-      path: "/img/sla.jpg",
-      alt: "serviço sla",
-    },
-    mainText: "isso eh um serviço sla",
-    subText: "nos sadgvasfd bla",
-  }
-]
 
+  {
+    image: {
+      path: "/img/sla.jpg",
+      alt: "serviço sla",
+    },
+    mainText: "isso eh um serviço sla",
+    subText: "nos bla bla",
+  },
+  {
+    image: {
+      path: "/img/sla.jpg",
+      alt: "serviço sla",
+    },
+    mainText: "isso eh um serviço sla",
+    subText: "nos sadgvasfd bla",
+  }
 ]
 
   return (
@@ -54,7 +51,7 @@ const services = [[
       />
 
       <Carousel
-        services={services}
+        serviceList={services}
       />
     </main>
   );
