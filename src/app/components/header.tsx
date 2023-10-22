@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import { AlignJustify } from "iconoir-react";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className="bg-white p-4">
       <div className="flex flex-row justify-between items-center px-4">
@@ -86,5 +86,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

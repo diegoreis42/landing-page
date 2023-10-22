@@ -1,42 +1,43 @@
-
 import { Hero, Carousel } from "@/app/components";
+import Faq from "./components/accordion";
+import { Forms } from "./components/Forms";
 
 export default function Home() {
-const services = [
-  {
-    image: {
-      path: "/img/sla.jpg",
-      alt: "serviço sla",
+  const services = [
+    {
+      image: {
+        path: "/img/sla.jpg",
+        alt: "serviço sla",
+      },
+      mainText: "isso eh um serviço sla",
+      subText: "nos bla bla",
     },
-    mainText: "isso eh um serviço sla",
-    subText: "nos bla bla",
-  },
-  {
-    image: {
-      path: "/img/sla.jpg",
-      alt: "serviço sla",
+    {
+      image: {
+        path: "/img/sla.jpg",
+        alt: "serviço sla",
+      },
+      mainText: "isso eh um serviço sla",
+      subText: "nos sadgvasfd bla",
     },
-    mainText: "isso eh um serviço sla",
-    subText: "nos sadgvasfd bla",
-  },
 
-  {
-    image: {
-      path: "/img/sla.jpg",
-      alt: "serviço sla",
+    {
+      image: {
+        path: "/img/sla.jpg",
+        alt: "serviço sla",
+      },
+      mainText: "isso eh um serviço sla",
+      subText: "nos bla bla",
     },
-    mainText: "isso eh um serviço sla",
-    subText: "nos bla bla",
-  },
-  {
-    image: {
-      path: "/img/sla.jpg",
-      alt: "serviço sla",
+    {
+      image: {
+        path: "/img/sla.jpg",
+        alt: "serviço sla",
+      },
+      mainText: "isso eh um serviço sla",
+      subText: "nos sadgvasfd bla",
     },
-    mainText: "isso eh um serviço sla",
-    subText: "nos sadgvasfd bla",
-  }
-]
+  ];
 
   return (
     <main>
@@ -51,11 +52,10 @@ const services = [
         buttonText="Saiba mais"
       />
 
-      <Carousel
-        serviceList={services}
-      />
+      <Carousel serviceList={services} />
 
-      <Faq></Faq>
+      <Faq />
+      <Forms />
     </main>
   );
 }

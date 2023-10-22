@@ -19,6 +19,9 @@ const faqData = [
 export default function Faq() {
   return (
     <div className=" pt-3 items-center  md:m-16">
+      <h1 className="flex justify-center pb-5 text-sky-800 font-bold  text-xl md:text-3xl">
+        Perguntas Frequentes
+      </h1>
       {faqData.map((faq, index) => (
         <div key={index} className="my-2">
           <Disclosure>
