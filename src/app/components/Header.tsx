@@ -15,8 +15,8 @@ interface Props {
 
 const Header = ({ links, image }: Props) => {
   return (
-    <header className="fixed bg-white p-4 container">
-      <div className="flex flex-row justify-between items-center px-4">
+    <header className=" bg-white p-4 container w-full top-0">
+      <div className="flex flex-row justify-between w-full items-center px-4">
         <div className="flex w-1/2 sm:w-auto">
           <a href={image.link?.link}>
             <Image

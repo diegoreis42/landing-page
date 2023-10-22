@@ -47,7 +47,7 @@ export const Carousel = ({ serviceList }: ServiceList) => {
 
 
   return (
-    <BootstrapCarousel activeIndex={index} onSelect={handleSelect} className="w-screen bg-sky-700 pt-15">
+    <BootstrapCarousel activeIndex={index} onSelect={handleSelect} className="w-screen bg-sky-300 pt-15">
       {services.map((list: Service[], idx) => (
         <BootstrapCarousel.Item key={idx} className='items-center p-12'>
           <div className='flex justify-evenly'>
@@ -59,7 +59,9 @@ export const Carousel = ({ serviceList }: ServiceList) => {
                   <Card.Text>
                     {service.subText}
                   </Card.Text>
-                  <Button variant="primary" className='bg-blue-500'>Contratar</Button>
+                  <Button variant="primary" className="visible md:invisible m-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2.5 focus:outline-none">
+                    Contratar
+                  </Button>
                 </Card.Body>
               </Card>
             ))}
