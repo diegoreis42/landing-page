@@ -1,3 +1,4 @@
+
 import { Hero, Carousel } from "@/app/components";
 
 export default function Home() {
@@ -53,6 +54,8 @@ const services = [
       <Carousel
         serviceList={services}
       />
+
+      <Faq></Faq>
     </main>
   );
 }
